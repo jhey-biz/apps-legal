@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Privacy Policy — ReceiptWala</title>
+<style>
+:root { color-scheme: light dark; }
+body { font-family: -apple-system, 'Segoe UI', Roboto, 'Noto Sans', sans-serif;
+       max-width: 760px; margin: 0 auto; padding: 24px 20px 64px; line-height: 1.65;
+       color: #1a1a1a; background: #fafafa; }
+@media (prefers-color-scheme: dark) { body { color: #e6e6e6; background: #121212; } }
+h1 { color: #1B5E20; font-size: 1.7em; }
+@media (prefers-color-scheme: dark) { h1 { color: #81C784; } }
+h2 { font-size: 1.25em; margin-top: 2em; border-bottom: 1px solid #8884; padding-bottom: 4px; }
+table { border-collapse: collapse; width: 100%; overflow-x: auto; display: block; }
+th, td { border: 1px solid #8886; padding: 6px 10px; text-align: left; font-size: 0.95em; }
+blockquote { border-left: 4px solid #FF6F00; margin: 1em 0; padding: 2px 14px; opacity: .85; }
+a { color: #1B5E20; } @media (prefers-color-scheme: dark) { a { color: #81C784; } }
+nav.crumb { font-size: .9em; margin-bottom: 1.5em; opacity: .8; }
+ul.pages { list-style: none; padding: 0; }
+ul.pages li { border: 1px solid #8885; border-radius: 10px; padding: 12px 16px; margin: .6em 0; }
+ul.pages li a { font-weight: 600; text-decoration: none; }
+ul.pages li p { margin: .3em 0 0; font-size: .9em; opacity: .75; }
+footer { margin-top: 48px; font-size: .85em; opacity: .7; }
+</style>
+</head>
+<body>
+<nav class="crumb"><a href="/">Neobplan apps</a> › <a href="/receiptwala/">ReceiptWala</a> › Privacy Policy</nav><h1>ReceiptWala — Privacy Policy</h1>
+<blockquote>
+<p><strong>STATUS: DRAFT — pending legal review.</strong> This document is a working draft prepared
+during Phase 5 (OI-06 / OI-11). It must be reviewed by qualified counsel and the
+business owner before publication. Once hosted, update <code>LegalUrls.PRIVACY</code> in the app
+(<code>app/src/main/java/com/receiptwala/app/ui/auth/LegalUrls.kt</code>) to the live URL, and
+publish a Hindi translation alongside the English text.</p>
+</blockquote>
+<p><strong>Effective date:</strong> <em>[to be set at publication]</em>
+<strong>Last updated:</strong> 2026-05-22</p>
+<hr />
+<h2>1. Who we are</h2>
+<p>ReceiptWala ("ReceiptWala", "we", "us") is a receipt and expense management app for
+Android, published for users in India. This Privacy Policy explains what personal data we
+process, why, where it is stored, and the choices and rights you have. It is written to
+meet the transparency obligations of India's <strong>Digital Personal Data Protection Act, 2023
+(DPDP Act)</strong>.</p>
+<p>By installing or using ReceiptWala you agree to this Policy. If you do not agree, please do
+not use the app.</p>
+<h2>2. Our core privacy principle</h2>
+<p><strong>Your receipts stay on your device.</strong> ReceiptWala is local-first: you can capture,
+scan, organise and review receipts fully without creating an account. Receipt images, the
+text extracted from them by on-device OCR, and the GST fields we parse (GSTIN, HSN code,
+tax rate, totals) are stored <strong>only in the app's local database on your device</strong>.</p>
+<p>We never upload your receipt images or their contents to ReceiptWala servers. The only
+place a copy of your receipts can leave your device is <strong>your own Google Drive</strong>, and only
+if you explicitly turn on backup (see §4.2).</p>
+<h2>3. When you can use the app without giving us any data</h2>
+<p>If you never sign in and never enable Drive backup, ReceiptWala does not transmit any
+personal data to us or to third parties, other than anonymous crash diagnostics (§4.5).
+Account, backup, and subscription features are optional.</p>
+<h2>4. What data we process, and where</h2>
+<h3>4.1 On-device data (not transmitted to us)</h3>
+<ul>
+<li>Receipt images you capture or import.</li>
+<li>OCR text and extracted fields (merchant, date, amount, GSTIN, HSN, tax rate, category).</li>
+<li>Your in-app settings and monthly usage counters.</li>
+</ul>
+<p>This data is held in the app's local storage and is removed when you delete the receipts
+or uninstall the app.</p>
+<h3>4.2 Backup to your own Google Drive (optional)</h3>
+<p>If you enable backup, ReceiptWala writes copies of your receipts (JSON + images) into a
+<code>ReceiptWala-Backups</code> folder in <strong>your</strong> Google Drive account. We use the restricted
+<code>drive.file</code> scope, which limits the app to files it created. These files are governed by
+Google's privacy terms and are under your control; we cannot see your wider Drive.</p>
+<h3>4.3 Account data (only if you sign in)</h3>
+<p>If you create an account (phone OTP, Google Sign-In, email/password, or Truecaller), we
+process:
+- <strong>Authentication identifiers</strong> — email address, phone number, and a Firebase user ID
+  (UID), handled by Firebase Authentication.
+- <strong>Profile record</strong> — account creation time, sign-in method, app locale, and the
+  timestamps at which you accepted this Policy and the Terms of Service. Stored in Cloud
+  Firestore in the <strong>asia-south2 (Delhi, India)</strong> region.</p>
+<h3>4.4 Subscription data (only if you purchase Premium)</h3>
+<p>If you buy a Premium subscription, Google Play processes the payment. We process the
+purchase token and subscription status to deliver Premium features and to verify the
+purchase server-side; subscription status is stored in Cloud Firestore (asia-south2). We
+do not receive or store your card or payment-instrument details.</p>
+<h3>4.5 Anonymous crash diagnostics</h3>
+<p>To keep the app stable we collect anonymous crash reports through Firebase Crashlytics.
+Crash reports are <strong>not associated with any user identifier</strong> — the app explicitly clears
+the Crashlytics user ID. We operate <strong>no advertising or analytics pipeline</strong> of any kind.</p>
+<h3>4.6 Device permissions</h3>
+<ul>
+<li><strong>Camera</strong> — to photograph receipts. Images are processed on-device.</li>
+<li><strong>Network / Wi-Fi state</strong> — for sign-in, Drive backup, and subscriptions.</li>
+<li><strong>Notifications</strong> — for backup status messages.</li>
+</ul>
+<h2>5. Why we process this data</h2>
+<table>
+<thead>
+<tr>
+<th>Purpose</th>
+<th>Data used</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Provide core receipt scanning and storage</td>
+<td>On-device data (§4.1)</td>
+</tr>
+<tr>
+<td>Optional cloud backup and restore</td>
+<td>Drive data (§4.2)</td>
+</tr>
+<tr>
+<td>Create and operate your account</td>
+<td>Account data (§4.3)</td>
+</tr>
+<tr>
+<td>Deliver and verify Premium subscriptions</td>
+<td>Subscription data (§4.4)</td>
+</tr>
+<tr>
+<td>Keep the app stable</td>
+<td>Anonymous crash diagnostics (§4.5)</td>
+</tr>
+</tbody>
+</table>
+<p>We rely on your consent (collected in-app before sign-in) and on the necessity of
+processing to provide the features you request.</p>
+<h2>6. Third-party services</h2>
+<ul>
+<li><strong>Google / Firebase</strong> — Authentication, Firestore, Cloud Functions, Crashlytics, Google
+  Play Billing, and Google Drive API.</li>
+<li><strong>Truecaller</strong> — optional one-tap phone sign-in, if you choose it.</li>
+</ul>
+<p>These providers process data under their own privacy terms. We do not sell your personal
+data, and we do not share it for advertising.</p>
+<h2>7. Cross-border transfer</h2>
+<p>Receipt contents and your profile, consent, and subscription records are stored in India
+(Firestore and Cloud Storage in <strong>asia-south2 / Delhi</strong>; Cloud Functions in <strong>asia-south1
+/ Mumbai</strong>).</p>
+<p><strong>Firebase Authentication does not support region selection.</strong> Your authentication
+identifiers (email, phone number, UID) are therefore stored on Google's global
+infrastructure, which may be located outside India. We process them only to provide the
+sign-in service you request. By creating an account you acknowledge this transfer.</p>
+<h2>8. Your rights under the DPDP Act</h2>
+<p>You may:
+- <strong>Access</strong> your data — view your stored receipts and account data in the app.
+- <strong>Correct</strong> your data — edit receipt fields and profile information in the app.
+- <strong>Erase</strong> your data — delete individual receipts at any time, or delete your account,
+  after which associated server-side data is removed within 30 days.
+- <strong>Port</strong> your data — export your receipts as CSV, PDF, or JSON from within the app.
+- <strong>Withdraw consent</strong> and <strong>raise a grievance</strong> — see §12.</p>
+<h2>9. Data retention</h2>
+<ul>
+<li>On-device data is retained until you delete it or uninstall the app.</li>
+<li>Account, consent, and subscription records are retained while your account is active.</li>
+<li>If an account is inactive (no sign-in) for <strong>2 years</strong>, we send an email warning and
+  delete the associated data <strong>30 days</strong> later.</li>
+<li>On account deletion, server-side data is deleted within 30 days.</li>
+</ul>
+<h2>10. Children</h2>
+<p>ReceiptWala is intended for adults managing expenses and is not directed at children. We
+do not knowingly collect data from children.</p>
+<h2>11. Security</h2>
+<p>Data in transit is encrypted using TLS. Server-side data is protected by Firebase access
+controls. On-device data is protected by Android's app sandbox. No method of storage or
+transmission is completely secure, and we cannot guarantee absolute security.</p>
+<h2>12. Contact and grievance redressal</h2>
+<p>For privacy questions, to exercise your rights, or to raise a grievance under the DPDP
+Act, contact our Grievance Officer:</p>
+<ul>
+<li><strong>Grievance Officer:</strong> <em>[name — to be appointed]</em></li>
+<li><strong>Email:</strong> support@neo-b.net</li>
+</ul>
+<h2>13. Changes to this Policy</h2>
+<p>We may update this Policy. Material changes will be notified in the app or by email. The
+"Last updated" date above reflects the current version.</p>
+<footer>ReceiptWala · Generated from the app repository source on 2026-08-19. The Markdown file in the repository is the authoritative draft until legal review completes.</footer>
+</body>
+</html>
