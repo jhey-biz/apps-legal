@@ -27,8 +27,8 @@ footer { margin-top: 48px; font-size: .85em; opacity: .7; }
 </head>
 <body>
 <nav class="crumb"><a href="/">Neobplan apps</a> › <a href="/receiptwala/">ReceiptWala</a> › Privacy Policy</nav><h1>ReceiptWala — Privacy Policy</h1>
-<p><strong>Effective date:</strong> 2026-08-21
-<strong>Last updated:</strong> 2026-08-21</p>
+<p><strong>Effective date:</strong> 2026-10-04
+<strong>Last updated:</strong> 2026-10-04</p>
 <hr />
 <h2>1. Who we are</h2>
 <p>ReceiptWala is operated by <strong>Neobplan</strong>, a company incorporated under the laws of the
@@ -70,20 +70,23 @@ privacy terms and are under your control.</p>
 will adhere to the <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
 including the Limited Use requirements.</p>
 <h3>4.3 Account data (only if you sign in)</h3>
-<p>If you create an account (phone OTP, Google Sign-In, email/password, or Truecaller), we
-process:</p>
+<p>If you create an account (phone OTP, Google Sign-In, or email/password), we process:</p>
 <ul>
 <li><strong>Authentication identifiers</strong> — email address, phone number, and a Firebase user ID
   (UID), handled by Firebase Authentication.</li>
-<li><strong>Profile record</strong> — account creation time, sign-in method, app locale, and the
-  timestamps at which you accepted this Policy and the Terms of Service. Stored in Cloud
-  Firestore in the <strong>asia-south2 (Delhi, India)</strong> region.</li>
+<li><strong>Profile record</strong> — your name, email address and phone number as provided by the
+  sign-in method you chose (each only if that method supplies it), the sign-in method,
+  app locale, account creation time, the time you last used the app while signed in, and
+  the timestamps at which you accepted this Policy and the Terms of Service. Stored in
+  Cloud Firestore in the <strong>asia-south2 (Delhi, India)</strong> region.</li>
 </ul>
 <h3>4.4 Subscription data (only if you purchase Premium)</h3>
-<p>If you buy a Premium subscription, Google Play processes the payment. We process the
-purchase token and subscription status to deliver Premium features and to verify the
-purchase server-side; subscription status is stored in Cloud Firestore (asia-south2). We
-do not receive or store your card or payment-instrument details.</p>
+<p>If you buy a Premium subscription, Google Play processes the payment. You can buy and
+use Premium without an account: the app reads your entitlement from Google Play on your
+device. If you are signed in, we also process the purchase token and subscription status
+to verify the purchase server-side, and store the product, purchase token, status and
+expiry time in Cloud Firestore (asia-south2). We do not receive or store your card or
+payment-instrument details.</p>
 <h3>4.5 Crash diagnostics</h3>
 <p>To keep the app stable we collect crash reports through Firebase Crashlytics. Crash
 reports are <strong>not linked to your account or to your receipts</strong> — the app explicitly clears
@@ -134,7 +137,6 @@ processing to provide the features you request.</p>
 <ul>
 <li><strong>Google / Firebase</strong> — Authentication, Firestore, Cloud Functions, Crashlytics, Google
   Play Billing, and Google Drive API.</li>
-<li><strong>Truecaller</strong> — optional one-tap phone sign-in, if you choose it.</li>
 </ul>
 <p>These providers process data under their own privacy terms. We do not sell your personal
 data, and we do not share it for advertising.</p>
@@ -155,7 +157,9 @@ sign-in service you request. By creating an account you acknowledge this transfe
 <li><strong>Erase</strong> your data — delete individual receipts at any time, or delete your account,
   after which the records we hold are deleted immediately and in no case later than
   30 days (see the <a href="https://apps.neo-b.net/receiptwala/delete-account/">account deletion page</a>).</li>
-<li><strong>Port</strong> your data — export your receipts as CSV, PDF, or JSON from within the app.</li>
+<li><strong>Port</strong> your data — export your receipts as CSV or PDF from within the app. If you use
+  Drive backup, your receipts are also stored in your own Google Drive as JSON files and
+  images that you can open directly.</li>
 <li><strong>Nominate</strong> another individual to exercise these rights on your behalf in the event of
   your death or incapacity. Write to cowboy75@neo-b.net.</li>
 <li><strong>Withdraw consent</strong> and <strong>raise a grievance</strong> — see §13.</li>
